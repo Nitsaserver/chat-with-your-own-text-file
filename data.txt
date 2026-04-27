@@ -1,0 +1,7 @@
+MendZone is a healthcare startup that automates diagnostic and insurance reports.
+
+The system uses Python scripts and MySQL databases.
+
+AWS S3 is used to store generated reports.
+
+Automation improves efficiency.
