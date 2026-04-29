@@ -1,7 +1,27 @@
-MendZone is a healthcare startup that automates diagnostic and insurance reports.
+Retrieval-Augmented Generation (RAG) is a technique used in AI systems to improve the accuracy of responses by combining information retrieval with text generation.
 
-The system uses Python scripts and MySQL databases.
+In a RAG system, when a user asks a question, the system first retrieves relevant information from a knowledge base. This knowledge base can include documents, PDFs, or databases.
 
-AWS S3 is used to store generated reports.
+The retrieved information is then passed as context to a language model, which generates an answer based only on that context. This helps reduce hallucination and ensures more accurate responses.
 
-Automation improves efficiency.
+A typical RAG pipeline includes the following steps:
+1. Load data (documents, text, etc.)
+2. Split data into smaller chunks
+3. Convert chunks into embeddings (numerical vectors)
+4. Store embeddings in a vector database like FAISS
+5. Retrieve relevant chunks based on a query
+6. Pass retrieved context to the LLM
+7. Generate a final answer
+
+Embeddings are numerical representations of text that capture semantic meaning. Similar texts have similar embeddings.
+
+FAISS (Facebook AI Similarity Search) is a library used to efficiently search and retrieve similar vectors.
+
+Reranking is used after retrieval to reorder results based on relevance. It improves the quality of context sent to the LLM.
+
+Evaluation in RAG systems measures how good the system is. Important metrics include:
+- Precision (are retrieved results relevant?)
+- Faithfulness (is the answer grounded in context?)
+- Relevance (does the answer match the question?)
+
+RAG systems are widely used in chatbots, search systems, and AI assistants to provide more reliable and context-aware responses.
